@@ -1,2 +1,0 @@
-debian/wrappers/celery usr/bin/
-debian/wrappers/celerybeat usr/bin/
