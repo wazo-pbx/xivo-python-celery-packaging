@@ -1,3 +1,9 @@
+xivo-python-celery-packaging (3.1.18-1~xivo3) xivo-dev; urgency=medium
+
+  * remove celeryd stuff which is unused in XiVO at the moment
+
+ -- Pascal Cadotte Michaud <pcadottemichaud@avencall.com>  Thu, 14 May 2015 11:48:12 -0400
+
 xivo-python-celery-packaging (3.1.18-1~xivo2) xivo-dev; urgency=medium
 
   * add celeryd
