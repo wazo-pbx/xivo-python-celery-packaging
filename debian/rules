@@ -1,11 +1,26 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
+export PYBUILD_NAME=celery
+export PYBUILD_SYSTEM=distutils
+
 %:
-	dh $@ --with python2
+	dh $@ --with python2 --buildsystem=pybuild
 
 override_dh_auto_build:
 	./fetch_tarball.sh
 
 override_dh_installchangelogs:
 	dh_installchangelogs Changelog
+
+override_dh_auto_clean:
+	true
+
+override_dh_clean:
+	true
+
+override_dh_auto_configure:
+	true
+
+override_dh_auto_test:
+	true
