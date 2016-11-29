@@ -6,12 +6,10 @@ Uploaders: XiVO Builder Team <release@xivo.io>
 Build-Depends: debhelper (>= 9),
                dh-python,
                python-all (>= 2.7),
-               python-setuptools
-Standards-Version: 3.9.4
+               python-setuptools,
+               wget
+Standards-Version: 3.9.6
 X-Python-Version: >= 2.7
-Homepage: http://www.celeryproject.org/
-Vcs-Svn: svn://anonscm.debian.org/python-modules/packages/celery/trunk/
-Vcs-Browser: http://anonscm.debian.org/viewvc/python-modules/packages/celery/trunk/
 
 Package: python-celery
 Architecture: all

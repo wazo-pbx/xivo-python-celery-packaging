@@ -1,14 +1,15 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
+PKG = $(word 2,$(shell dpkg-parsechangelog | grep Source))
+VER ?= $(shell cat VERSION)
+CELERY_URL_DOWNLOAD = "https://pypi.python.org/packages/source/c/celery/celery-${VER}.tar.gz"
+
 export PYBUILD_NAME=celery
 export PYBUILD_SYSTEM=distutils
 
 %:
 	dh $@ --with python2 --buildsystem=pybuild
-
-override_dh_auto_build:
-	./fetch_tarball.sh
 
 override_dh_installchangelogs:
 	dh_installchangelogs Changelog
@@ -24,3 +25,9 @@ override_dh_auto_configure:
 
 override_dh_auto_test:
 	true
+
+.PHONY: get-orig-source
+
+get-orig-source:
+	@echo "# Downloading..."
+	wget -nv -T10 -t3 $(CELERY_URL_DOWNLOAD} -O ../$(PKG)_$(VER).orig.tar.gz
