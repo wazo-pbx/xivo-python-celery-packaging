@@ -10,6 +10,7 @@ PREFIXC = debian/python-celery-common
 
 export PYBUILD_NAME=celery
 export PYBUILD_DISABLE=test
+export PYBUILD_SYSTEM=distutils
 
 %:
 	dh $@ --with python2,python3 --buildsystem=pybuild

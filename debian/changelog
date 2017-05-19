@@ -1,3 +1,9 @@
+xivo-python-celery-packaging (3.1.18-1~xivo9) wazo-dev; urgency=medium
+
+  * set the PYBUILD_SYSTEM in rules
+
+ -- Wazo Maintainers <dev+pkg@wazo.community>  Fri, 19 May 2017 12:30:18 -0400
+
 xivo-python-celery-packaging (3.1.18-1~xivo8) wazo-dev; urgency=medium
 
   * copy debian jessie packaging
