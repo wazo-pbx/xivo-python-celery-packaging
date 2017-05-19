@@ -19,6 +19,9 @@ override_dh_clean:
 	rm -rf .build
 	dh_clean
 
+override_dh_auto_clean:
+	if [ -f setup.py ]; then dh_auto_clean; fi
+
 override_dh_install:
 	dh_install
 	# Fix permissions
