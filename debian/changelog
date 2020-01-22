@@ -1,3 +1,9 @@
+xivo-python-celery-packaging (4.2.1-1~wazo1) wazo-dev; urgency=medium
+
+  * update version
+
+ -- Wazo Maintainers <dev+pkg@wazo.community>  Thu, 05 Feb 2019 19:14:36 +0100
+
 xivo-python-celery-packaging (3.1.23-1~wazo1) wazo-dev; urgency=medium
 
   * update version
